@@ -1,11 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import * as S from "./styles";
 
+const linkStyle = {
+  marginLeft: "0.5rem",
+  textDecoration: "none",
+  color: "#526eff",
+};
+
 export default function SignUp() {
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("Clicou, meu PEIXE!!!");
+  }
+
   return (
-    <div>
-      <h1>Página de Registro</h1>
+    <div className="wrapper">
+      <div className="mainContainer">
+        <S.H1>Faça o seu Registro</S.H1>
+
+        <S.Form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nome"
+            autocomplete="off"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            autocomplete="off"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Cadastrar</button>
+        </S.Form>
+
+        <p>
+          Você já possui uma conta?
+          <Link to="/" style={linkStyle}>
+            Entrar na sua conta
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }
