@@ -1,9 +1,11 @@
 import React from "react";
 
+import * as S from "./styles";
+
 export default function SignIn() {
   return (
-    <div>
+    <S.Dive>
       <h1>Página de Login</h1>
-    </div>
+    </S.Dive>
   );
 }

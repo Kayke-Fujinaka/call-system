@@ -1,3 +1,8 @@
+import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
+
+const GlobalStyle = createGlobalStyle`
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
@@ -20,7 +25,7 @@ html, body, #root {
 
 body {
     font: 1.4rem 'Roboto', sans-serif;
-    background-color: #EFEFEF;
+    background-color: ${theme.white3};
 }
 
 a {
@@ -34,3 +39,7 @@ ul {
 button {
     cursor: pointer;
 }
+
+`;
+
+export default GlobalStyle;
