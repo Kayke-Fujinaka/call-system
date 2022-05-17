@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function App() {
+export default function SignIn() {
   return (
     <div>
-      <h1>TESTE</h1>
+      <h1>Página de Login</h1>
     </div>
   );
 }
