@@ -19,9 +19,9 @@ export default function SignUp() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    
-    if(nome !== '' && email !== '' && password !== ''){
-      signUp(email, password, nome)
+
+    if (nome !== "" && email !== "" && password !== "") {
+      signUp(email, password, nome);
     }
   }
 
@@ -54,7 +54,9 @@ export default function SignUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">{loadingAuth ? 'Carregando...' : 'Cadastrar'}</button>
+          <button type="submit">
+            {loadingAuth ? "Carregando..." : "Cadastrar"}
+          </button>
         </S.Form>
 
         <p>
