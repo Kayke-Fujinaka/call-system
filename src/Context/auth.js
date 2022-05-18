@@ -8,8 +8,8 @@ function AuthProvider({ children }) {
   const [loadingAuth, setLoadingAuth] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  function LoadStorage() {
-    useEffect(() => {
+  useEffect(() => {
+    function LoadStorage() {
       const userStorage = localStorage.getItem("userSystem");
 
       if (userStorage) {
@@ -18,10 +18,48 @@ function AuthProvider({ children }) {
       }
 
       setLoading(false);
-    }, []);
+    }
+
+    LoadStorage();
+  }, []);
+
+  async function signUp(email, password, nome) {
+    setLoadingAuth(true);
+    await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(async (value) => {
+        let uid = value.user.uid;
+
+        await firebase
+          .firestore()
+          .collection("users")
+          .doc(uid)
+          .set({
+            nome: nome,
+            avatarURL: null,
+          })
+          .then(() => {
+            let data = {
+              uid: uid,
+              nome: nome,
+              email: value.user.email,
+              avatarURL: null,
+            };
+            setUser(data);
+            userStorage(data);
+            setLoadingAuth(false);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoadingAuth(false);
+      });
   }
 
-  LoadStorage();
+  function userStorage(data) {
+    localStorage.setItem("userSystem", JSON.stringify(data));
+  }
 
   return (
     <AuthContext.Provider
@@ -29,6 +67,7 @@ function AuthProvider({ children }) {
         signed: !!user,
         user,
         loading,
+        signUp,
       }}
     >
       {children}
