@@ -5,17 +5,19 @@ import Routes from "./Routes";
 
 import GlobalStyle from "./Styles/global";
 
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-      <ToastContainer autoClose={2000} />
-        <Routes />
-      </BrowserRouter>
-      <GlobalStyle />
-    </AuthProvider>
+    <div>
+      <AuthProvider>
+        <BrowserRouter>
+          <ToastContainer autoClose={2000} />
+          <Routes />
+        </BrowserRouter>
+        <GlobalStyle />
+      </AuthProvider>
+    </div>
   );
 }

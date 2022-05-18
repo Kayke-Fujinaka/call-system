@@ -41,9 +41,9 @@ function AuthProvider({ children }) {
 
         let data = {
           uid: uid,
-          nome: userProfile.data.nome,
-          avatarURL: userProfile.data.avatarURL,
-          email: value.user.email,
+          nome: userProfile.data().nome,
+          avatarURL: userProfile.data().avatarURL,
+          email: userProfile.data().email,
         };
         setUser(data);
         userStorage(data);
@@ -77,6 +77,7 @@ function AuthProvider({ children }) {
           .set({
             nome: nome,
             avatarURL: null,
+            email: email
           })
           .then(() => {
             let data = {
@@ -123,6 +124,8 @@ function AuthProvider({ children }) {
         signIn,
         signUp,
         signOut,
+        setUser,
+        userStorage,
       }}
     >
       {children}
