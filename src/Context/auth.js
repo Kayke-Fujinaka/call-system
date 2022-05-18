@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import firebase from "../Services/firebaseConnection";
 
 export const AuthContext = createContext({});
@@ -61,6 +61,12 @@ function AuthProvider({ children }) {
     localStorage.setItem("userSystem", JSON.stringify(data));
   }
 
+  async function signOut() {
+    await firebase.auth().signOut();
+    localStorage.removeItem("userSystem")
+    setUser(null)
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -68,6 +74,7 @@ function AuthProvider({ children }) {
         user,
         loading,
         signUp,
+        signOut,
       }}
     >
       {children}
