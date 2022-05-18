@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from '../../Context/auth'
 
 import * as S from "./styles";
 
@@ -13,9 +14,14 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { signIn, loadingAuth } = useContext(AuthContext);
+
   function handleSubmit(e) {
     e.preventDefault();
-    alert("Clicou, meu PEIXE!!!");
+
+    if(email !== '' && password !== ''){
+      signIn(email, password)
+    }
   }
 
   return (
@@ -39,7 +45,7 @@ export default function SignIn() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Entrar</button>
+          <button type="submit">{loadingAuth ? 'Carregando...' : 'Entrar'}</button>
         </S.Form>
 
         <p>

@@ -15,7 +15,7 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { signUp } = useContext(AuthContext);
+  const { signUp, loadingAuth } = useContext(AuthContext);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -54,7 +54,7 @@ export default function SignUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Cadastrar</button>
+          <button type="submit">{loadingAuth ? 'Carregando...' : 'Cadastrar'}</button>
         </S.Form>
 
         <p>
