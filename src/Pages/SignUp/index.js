@@ -29,7 +29,7 @@ export default function SignUp() {
             type="text"
             name="name"
             placeholder="Nome"
-            autocomplete="off"
+            autoComplete="off"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
           />
@@ -37,7 +37,7 @@ export default function SignUp() {
             type="text"
             name="email"
             placeholder="Email"
-            autocomplete="off"
+            autoComplete="off"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

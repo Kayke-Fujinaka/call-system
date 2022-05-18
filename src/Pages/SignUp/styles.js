@@ -35,4 +35,3 @@ export const Form = styled.form`
     filter: brightness(0.95);
   }
 `;
-

@@ -28,7 +28,7 @@ export default function SignIn() {
             type="text"
             name="email"
             placeholder="Email"
-            autocomplete="off"
+            autoComplete="off"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
