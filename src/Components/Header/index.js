@@ -19,23 +19,18 @@ export default function Header() {
         />
       </S.HeaderImgWrapper>
 
-      <S.IconList>
-        <Link to="/dashboard" className="linkItemHeader">
-          <li>
-            <FiHome className="iconHeader" /> Chamados
-          </li>
-        </Link>
-        <Link to="/customers" className="linkItemHeader">
-          <li>
-            <FiUser className="iconHeader" /> Clientes
-          </li>
-        </Link>
-        <Link to="/profile" className="linkItemHeader">
-          <li>
-            <FiSettings className="iconHeader" /> Minha conta
-          </li>
-        </Link>
-      </S.IconList>
+      <Link to="/dashboard">
+        <FiHome color="#FFF" size={24} />
+        Chamados
+      </Link>
+      <Link to="/customers">
+        <FiUser color="#FFF" size={24} />
+        Clientes
+      </Link>
+      <Link to="/profile">
+        <FiSettings color="#FFF" size={24} />
+        Configurações
+      </Link>
     </S.Sidebar>
   );
 }
