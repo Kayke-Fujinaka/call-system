@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import firebase from "../Services/firebaseConnection";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext({});
 
@@ -48,15 +48,15 @@ function AuthProvider({ children }) {
         setUser(data);
         userStorage(data);
         setLoadingAuth(false);
-        toast.success('Bem vindo de volta a plataforma! 🚀', {
-          theme: "dark"
-        })
+        toast.success("Bem vindo de volta a plataforma! 🚀", {
+          theme: "dark",
+        });
       })
       .catch((error) => {
         console.log(error);
         toast.error("Ops! Parece que ocorreu algum erro!", {
-          theme: "dark"
-        })
+          theme: "dark",
+        });
         setLoadingAuth(false);
       });
   }
@@ -88,16 +88,16 @@ function AuthProvider({ children }) {
             setUser(data);
             userStorage(data);
             setLoadingAuth(false);
-            toast.success('Bem vindo a plataforma! 🚀', {
-              theme: "dark"
-            })
+            toast.success("Bem vindo a plataforma! 🚀", {
+              theme: "dark",
+            });
           });
       })
       .catch((error) => {
         console.log(error);
         toast.error("Ops! Parece que ocorreu algum erro!", {
-          theme: "dark"
-        })
+          theme: "dark",
+        });
         setLoadingAuth(false);
       });
   }
