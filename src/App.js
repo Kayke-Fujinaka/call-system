@@ -12,7 +12,7 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={2000} />
         <Routes />
       </BrowserRouter>
       <GlobalStyle />
