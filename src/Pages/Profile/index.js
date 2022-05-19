@@ -1,5 +1,7 @@
 import React from "react";
 
+import * as S from "./styles";
+
 function Profile() {
   return (
     <div>
