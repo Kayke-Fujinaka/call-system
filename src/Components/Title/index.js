@@ -2,12 +2,11 @@ import React from 'react';
 
 import * as S from "./styles";
 
-function Title() {
+export default function Title({children, name}) {
   return (
-      <div>
-          <h1>TITLE</h1>
-      </div>
+      <S.Title>
+        {children}
+        <span>{name}</span>
+      </S.Title>
   );
 }
-
-export default Title;

@@ -14,7 +14,7 @@ export default function Header() {
     <S.Sidebar>
       <S.HeaderImgWrapper>
         <img
-          src={user.avatarURL !== null ? avatar : user.avatarURL}
+          src={user.avatarURL === null ? avatar : user.avatarURL}
           alt="User avatar"
         />
       </S.HeaderImgWrapper>
