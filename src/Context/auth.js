@@ -43,7 +43,7 @@ function AuthProvider({ children }) {
           uid: uid,
           nome: userProfile.data().nome,
           avatarURL: userProfile.data().avatarURL,
-          email: userProfile.data().email,
+          email: userProfile.email,
         };
         setUser(data);
         userStorage(data);
