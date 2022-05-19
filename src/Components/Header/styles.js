@@ -37,7 +37,7 @@ export const Sidebar = styled.div`
 `;
 
 export const HeaderImgWrapper = styled.div`
-  height: 150px;
+  height: 15rem;
   padding-top: 3rem;
 
   background: #181c2e url(${cover}) center no-repeat;
@@ -49,8 +49,8 @@ export const HeaderImgWrapper = styled.div`
     margin: auto;
     border-radius: 50%;
     object-fit: cover;
-    filter: drop-shadow(2px 3px 6px #121212);
-    -webkit-filter: drop-shadow(2px 3px 6px #121212);
+    filter: drop-shadow(0.2rem 0.3rem 0.6rem #121212);
+    -webkit-filter: drop-shadow(0.2rem 0.3rem 0.6rem #121212);
   }
   @media (max-width: 700px) {
     display: none;

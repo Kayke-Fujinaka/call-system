@@ -10,7 +10,7 @@ import avatar from "../../Assets/avatar.png";
 import * as S from "./styles";
 
 export default function Profile() {
-  const { user } = useContext(AuthContext);
+  const { user, signOut } = useContext(AuthContext);
 
   const [nome, setNome] = useState(user && user.nome);
   const [email, setEmail] = useState(user && user.email);
@@ -26,8 +26,8 @@ export default function Profile() {
         </Title>
 
         <S.Container>
-          <S.Form>
-            <label>
+          <form className="form-profile">
+            <S.AvatarLabel>
               <span>
                 <FiUpload color="#FFF" size={25} />
               </span>
@@ -42,7 +42,7 @@ export default function Profile() {
                   alt="User avatar"
                 />
               )}
-            </label>
+            </S.AvatarLabel>
 
             <label>Nome</label>
             <input
@@ -52,14 +52,16 @@ export default function Profile() {
             />
 
             <label>Email</label>
-            <input
-              type="text"
-              value={email}
-              disabled={true}
-            />
+            <input type="text" value={email} disabled={true} />
 
-            <button type="submit" >Salvar</button>
-          </S.Form>
+            <button type="submit">Salvar</button>
+          </form>
+        </S.Container>
+
+        <S.Container>
+          <button className="logout-btn" onClick={() => signOut()}>
+            Sair
+          </button>
         </S.Container>
       </div>
     </div>
