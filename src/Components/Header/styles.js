@@ -56,5 +56,3 @@ export const HeaderImgWrapper = styled.div`
     display: none;
   }
 `;
-
-export const IconList = styled.div``;
