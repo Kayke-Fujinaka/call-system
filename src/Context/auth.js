@@ -119,12 +119,12 @@ function AuthProvider({ children }) {
       value={{
         signed: !!user,
         user,
+        setUser,
         loading,
         loadingAuth,
         signIn,
         signUp,
         signOut,
-        setUser,
         userStorage,
       }}
     >
