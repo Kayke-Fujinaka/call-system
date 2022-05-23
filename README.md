@@ -12,12 +12,13 @@ Explicação de como funciona o projeto, os components utilizados, ideia do proj
 
 ## 📁 Páginas
 
-O site tem no total X páginas, sendo elas:
+O site tem no total 5 páginas, sendo elas:
 
-- **Example 1:** Lorem ipsum dolor sit amet.
-- **Example 2:** Lorem ipsum dolor sit amet.
-- **Example 3:** Lorem ipsum dolor sit amet.
-- **Example 4:** Lorem ipsum dolor sit amet.
+- **Login:** A página para fazer o Login e ter acesso ao site.
+- **Registro:** A página que tem a funcionalidade de cadastrar os usuários no site e assim ter acesso as outras páginas privadas.
+- **Dashboard (Privada):** A página que tem a funcionalidade de registrar chamados.
+- **Customers (Privada):** A página que tem a funcionalidade de cadastrar uma empresa, colocando o nome da empresa, CPNJ e o endereço da empresa.
+- **Profile (Privada):** A página que apresenta as informações (nome, email e avatar) do usuário cadastrado, a qual possui a funcionalidade de edita-las, exceto o e-mail.
 
 ## 🎯 Etapas
 
