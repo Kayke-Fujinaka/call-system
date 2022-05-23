@@ -8,7 +8,26 @@
 
 ## :page_facing_up: Explicação
 
-Explicação de como funciona o projeto, os components utilizados, ideia do projeto, etc...
+O projeto foi realizado utilizando o framework [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html) conectando com o [Firebase](https://firebase.google.com/docs) que ajudou na autenticação, cadastro, login e persistência dos dados.
+
+🎲 **Como Funciona o Projeto**
+
+Ele serve para estabelecer uma rotina de gerenciamento disponibilizado ao usuário, tendo algumas funcionalidades, como, por exemplo, criar um chamado, cadastrar uma empresa, editar informações do chamados/clientes, editar o perfil e etc.
+
+O usuário consegue criar clientes ou empresas, a qual vão ser registradas dentro do site, podendo criar chamados depois.
+
+Caso o usuário deseje cadastrar um chamado. Ele precisa colocar:
+
+- Qual é o cliente que necessita desse serviço. Assim, vai aparecer uma lista com algumas empresas;
+- O assunto que precisa ser tratado ou discutido;
+- O status do chamado, sendo eles: Em Aberto, Progresso ou Atendido;
+- Completo que serve para descrever melhor o problema, visando ter uma comunicação mais efetiva (Opcional).
+
+⚠️ **Observações**
+
+O visitante não terá acesso as rotas privadas. Caso não tenha se registrado ou realizado o login no site. Portanto, sempre que tentar acessar pela URL sem estar cadastrado/logado, ele será redirecionado para a página inicial.
+
+Além disso, o usuário não poderá retornar a página inicial quando já estiver logado. Dessa maneira, ele necessitará deslogar na página Profile para retornar a tela de Login ou Registro.
 
 ## 📁 Páginas
 
