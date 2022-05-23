@@ -90,12 +90,16 @@ Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://
 ```bash
 # Clone this project
 $ git clone https://github.com/Kayke-Fujinaka/Call-System
+
 # Access
 $ cd call-system
+
 # Install dependencies
 $ yarn or npm
+
 # Run the project
 $ yarn start or npm start
+
 # The server will initialize in the <http://localhost:3000>
 ```
 
