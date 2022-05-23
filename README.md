@@ -2,9 +2,9 @@
 
 <img src="https://www.acheicampos.com.br/uploads/advertiser/default_anunciante_thumbnail.png" alt="Descrição da imagem">
 
-> 🔎 Descrição do projeto (1 a 3 linhas)
+> 🔎 O Call System ou Sistema de Chamados é uma ferramenta utilizada para centralizar demandas dos usuários. Ele serve para estabelecer uma rotina de gerenciamento dessas solicitações.
 
-🗔 Confira a aplicação: https://www.linkedin.com/in/kayke-fujinaka/ <br>
+🗔 Confira a aplicação: https://www.linkedin.com/in/kayke-fujinaka/
 
 ## :page_facing_up: Explicação
 
