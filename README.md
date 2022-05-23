@@ -1,4 +1,4 @@
-<h1 align="center">(EMOJI) TÍTULO DO PROJETO</h1>
+<h1 align="center">📞 CALL SYSTEM (Em progresso...)</h1>
 
 <img src="https://www.acheicampos.com.br/uploads/advertiser/default_anunciante_thumbnail.png" alt="Descrição da imagem">
 
@@ -10,7 +10,6 @@
 
 Explicação de como funciona o projeto, os components utilizados, ideia do projeto, etc...
 
-
 ## 📁 Páginas
 
 O site tem no total X páginas, sendo elas:
@@ -20,28 +19,40 @@ O site tem no total X páginas, sendo elas:
 - **Example 3:** Lorem ipsum dolor sit amet.
 - **Example 4:** Lorem ipsum dolor sit amet.
 
-## ⚔️ Desafio
+## 🎯 Etapas
 
-:heavy_check_mark: Desafio 1\
-:x: Desafio 2\
-:x: Desafio 3\
-:x: Desafio 4\
-:x: Desafio 5\
---- ⚙️ Extra ---\
-:heavy_check_mark: Desafio 1\
-:x: Desafio 2
-
-## 🎯 Etapas ##
-
-:heavy_check_mark: Etapa 1\
-:heavy_check_mark: Etapa 2\
-:heavy_check_mark: Etapa 3\
-:heavy_check_mark: Etapa 4\
-:heavy_check_mark: Etapa 5\
-:heavy_check_mark: Etapa 6\
+:heavy_check_mark: Estilos Globais do Projeto\
+:heavy_check_mark: Adicionando Firebase\
+:heavy_check_mark: Adicionando Styled-Components\
+:heavy_check_mark: Página/Rotas do Login e Registro\
+:heavy_check_mark: Estruturação/Estilização do Login e Registro\
+:heavy_check_mark: Página/Rota do Dashboard (Rota Privada)\
+:heavy_check_mark: Context Criado\
+:heavy_check_mark: Importando Ferramentas do Firebase\
+:heavy_check_mark: Funcionalidade Login/Registro com o Firebase\
+:heavy_check_mark: Adicionando Toastify\
+:heavy_check_mark: Componente Header\
+:heavy_check_mark: Componente Title\
+:heavy_check_mark: Página/Rota do Perfil do usuário (Rota Privada)\
+:heavy_check_mark: Estruturação/Estilização do Perfil\
+:heavy_check_mark: Editar o Perfil\
+:heavy_check_mark: Página/Rota do Customers (Rota Privada)\
+:heavy_check_mark: Estruturação/Estilização do Customers\
+:heavy_check_mark: Registrar uma Empresa no Customers\
+:heavy_check_mark: Refatoração do Dashboard\
+:heavy_check_mark: Estruturação/Estilização do Dashboard\
+:heavy_check_mark: Exemplo 1\
+:heavy_check_mark: Exemplo 2\
+:heavy_check_mark: Exemplo 3\
+:heavy_check_mark: Exemplo 4\
+:heavy_check_mark: Exemplo 5\
 :x: Projeto Finalizado
 
-## 🚀 Tecnologias ##
+--- ⚙️ Extra ---\
+:x: Exemplo 1\
+:x: Exemplo 2
+
+## 🚀 Tecnologias
 
 - [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html)
 - [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
@@ -52,7 +63,7 @@ O site tem no total X páginas, sendo elas:
 - [Firebase](https://firebase.google.com/docs)
 - [Styled Components](https://styled-components.com)
 
-## :closed_book: Como usar? ##
+## :closed_book: Como usar?
 
 Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
@@ -62,9 +73,9 @@ $ git clone https://github.com/Kayke-Fujinaka/Call-System
 # Access
 $ cd call-system
 # Install dependencies
-$ yarn or npm 
+$ yarn or npm
 # Run the project
-$ yarn start or npm start 
+$ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
