@@ -43,10 +43,14 @@ O site tem no total X páginas, sendo elas:
 
 ## 🚀 Tecnologias ##
 
-- [Example 1](https://www.linkedin.com/in/kayke-fujinaka/)
-- [Example 2](https://www.linkedin.com/in/kayke-fujinaka/)
-- [Example 3](https://www.linkedin.com/in/kayke-fujinaka/)
-- [Example 4](https://www.linkedin.com/in/kayke-fujinaka/)
+- [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html)
+- [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [AuthContext](https://blog.rocketseat.com.br/autenticacao-no-react-native-reactjs-com-context-api-hooks/)
+- [Firebase](https://firebase.google.com/docs)
+- [Styled Components](https://styled-components.com)
 
 ## :closed_book: Como usar? ##
 
