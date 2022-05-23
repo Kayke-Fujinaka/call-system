@@ -36,9 +36,12 @@ export default function Customers() {
         })
         .catch((error) => {
           console.log(error);
+          toast.error("Erro ao Cadastrar!", {
+            theme: "colored",
+          });
         });
     } else {
-      toast.error("Preencha todos os campos!", {
+      toast.error("Preencha Todos os Campos!", {
         theme: "colored",
       });
     }
