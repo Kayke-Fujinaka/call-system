@@ -12,6 +12,11 @@ export default function Customers() {
   const [ cnpjEmpresa, setCnpjEmpresa ] = useState('')
   const [ enderecoEmpresa, setEnderecoEmpresa ] = useState('')
 
+  function handleAdd(e) {
+    e.preventDefault()
+    alert("Teste")
+  }
+
   return (
     <div>
       <Header />
@@ -22,7 +27,7 @@ export default function Customers() {
         </Title>
         
         <div>
-          <form className="form-profile customers">
+          <form className="form-profile customers" onSubmit={handleAdd}>
             <label>Nome da Empresa</label>
             <input type="text" value={nomeEmpresa} placeholder="Digite o Nome da sua Empresa" onChange={ (e) => setNomeEmpresa(e.target.value)} />
 
