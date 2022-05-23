@@ -5,7 +5,7 @@ import Title from "../../Components/Title";
 
 import { FiUser } from "react-icons/fi";
 
-// import * as S from "./styles";
+import * as S from "./styles";
 
 export default function Customers() {
   const [ nomeEmpresa, setNomeEmpresa ] = useState('')
@@ -26,7 +26,7 @@ export default function Customers() {
           <FiUser size={25} />
         </Title>
         
-        <div>
+        <S.Container>
           <form className="form-profile customers" onSubmit={handleAdd}>
             <label>Nome da Empresa</label>
             <input type="text" value={nomeEmpresa} placeholder="Digite o Nome da sua Empresa" onChange={ (e) => setNomeEmpresa(e.target.value)} />
@@ -37,9 +37,9 @@ export default function Customers() {
             <label>Endereço da Empresa</label>
             <input type="text" value={enderecoEmpresa} placeholder="Digite o Endereço da sua Empresa" onChange={ (e) => setEnderecoEmpresa(e.target.value)} />
 
-            <button type="submit">Cadastrar Empresa</button>
+            <button type="submit">Cadastrar</button>
           </form>
-        </div>
+        </S.Container>
          
       </div>
     </div>

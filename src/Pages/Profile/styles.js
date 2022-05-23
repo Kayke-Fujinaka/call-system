@@ -10,6 +10,7 @@ export const Container = styled.div`
   .form-profile {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .form-profile label {
     margin-bottom: 0.5em;
