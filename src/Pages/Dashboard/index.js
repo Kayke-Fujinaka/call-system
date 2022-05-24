@@ -9,7 +9,7 @@ import { FiMessageSquare, FiPlus } from "react-icons/fi";
 import * as S from "./styles";
 
 export default function Dashboard() {
-  const [chamados, setChamados] = useState([]);
+  const [chamados, setChamados] = useState([1]);
 
   return (
     <div>
@@ -30,10 +30,10 @@ export default function Dashboard() {
           </S.Container>
         ) : (
           <>
-            <Link to="/new" className="new">
-              <FiPlus size={25} color="#FFFFFF" />
-              Novo chamado
-            </Link>
+              <Link to="/new" className="new">
+                <FiPlus size={25} color="#FFFFFF" />
+                Novo chamado
+              </Link>
           </>
         )}
       </div>
