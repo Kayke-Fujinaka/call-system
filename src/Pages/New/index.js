@@ -8,6 +8,12 @@ import { FiPlusCircle } from "react-icons/fi";
 import * as S from "./styles";
 
 export default function New() {
+
+    function handleRegister(e) {
+        e.preventDefault()
+        alert('Teste')
+    }
+
   return (
     <div>
       <Header />
@@ -18,7 +24,7 @@ export default function New() {
         </Title>
 
         <S.Container>
-          <form className="form-profile">
+          <form className="form-profile" onSubmit={handleRegister}>
             <label>Cliente</label>
             <select>
               <option key={1} value={1}>
