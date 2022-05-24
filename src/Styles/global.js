@@ -90,6 +90,11 @@ div.content {
     background-color: #83bf02;
 
     transition: ease-in 0.1s;
+
+    @media (max-width: 700px) {
+        font-size: 1em;
+        padding: 0.3em;
+    }
   }
 
 .new svg {
