@@ -50,6 +50,8 @@ export default function New() {
               type="text"
               placeholder="Descreve o seu problema (Opcional)"
             />
+
+            <button type="submit">Registrar</button>
           </form>
         </S.Container>
       </div>
