@@ -9,7 +9,7 @@ import { FiMessageSquare, FiPlus, FiSearch, FiEdit2 } from "react-icons/fi";
 import * as S from "./styles";
 
 export default function Dashboard() {
-  const [chamados, setChamados] = useState([1]);
+  const [chamados, setChamados] = useState([]);
 
   return (
     <div>
