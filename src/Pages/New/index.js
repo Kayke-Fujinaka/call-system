@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from 'react';
 import { AuthContext } from "../../Context/auth";
 import firebase from "../../Services/firebaseConnection";
 
@@ -6,6 +6,7 @@ import Header from "../../Components/Header";
 import Title from "../../Components/Title";
 
 import { FiPlusCircle } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 import * as S from "./styles";
 
@@ -18,7 +19,7 @@ export default function New() {
   const [status, setStatus] = useState("Aberto");
   const [complemento, setComplemento] = useState("");
 
-  const { users } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     async function loadCustomers() {
@@ -56,9 +57,34 @@ export default function New() {
     loadCustomers();
   }, []);
 
-  function handleRegister(e) {
+  async function handleRegister(e) {
     e.preventDefault();
-    alert("Teste");
+
+    await firebase
+      .firestore()
+      .collection("users")
+      .add({
+        created: new Date(),
+        cliente: customers[customerSelected].nomeEmpresa,
+        clienteId: customers[customerSelected].id,
+        assunto: assunto,
+        status: status,
+        complemento: complemento,
+        userId: user.uid,
+      })
+      .then(() => {
+        toast.success("Chamado registrado com sucesso!", {
+          theme: "colored",
+        });
+        setComplemento("");
+        setCustomersSelected(0);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Ops, ocorreu algum erro. Tente novamente!", {
+          theme: "colored",
+        });
+      });
   }
 
   // Chamada Quando Troca o Assunto
