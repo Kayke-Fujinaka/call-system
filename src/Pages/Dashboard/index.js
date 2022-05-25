@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import firebase from "../../Services/firebaseConnection";
+import { format } from 'date-fns'
 
 import Header from "../../Components/Header";
 import Title from "../../Components/Title";
@@ -8,8 +10,58 @@ import { FiMessageSquare, FiPlus, FiSearch, FiEdit2 } from "react-icons/fi";
 
 import * as S from "./styles";
 
+const listRef = firebase
+  .firestore()
+  .collection("chamados")
+  .orderBy("created", "desc");
+
 export default function Dashboard() {
   const [chamados, setChamados] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [isEmpty, setIsEmpty] = useState(false)
+
+  useEffect(() => {
+    loadChamados();
+
+    return () => {};
+  }, []);
+
+  async function loadChamados() {
+    await listRef
+      .limit(5)
+      .get()
+      .then((snapshot) => {
+        updateState(snapshot);
+      })
+      .catch((error) => {
+        console.log("Ocorreu algum erro:", error);
+        setLoadingMore(false);
+      });
+
+    setLoading(false);
+  }
+
+  async function updateState(snapshot) {
+    const isCollectionEmpty = snapshot.size === 0;
+
+    if (!isCollectionEmpty) {
+      let list = [];
+
+      snapshot.forEach((doc) => {
+        list.push({
+          id: doc.id,
+          assunto: doc.data().assunto,
+          cliente: doc.data().cliente,
+          clienteId: doc.data().clienteId,
+          created: doc.data().created,
+          createdFormated: format(doc.data().created.toDate(), "dd/MM/yyyy"),
+          status: doc.data().status,
+          complemento: doc.data().complemento
+        })
+      });
+    }
+  }
 
   return (
     <div>
@@ -59,10 +111,16 @@ export default function Dashboard() {
                   </td>
                   <td data-label="Cadastro">24/05/2022</td>
                   <td data-label="#">
-                    <button className="action" style={{ backgroundColor: "#3583f6" }}>
+                    <button
+                      className="action"
+                      style={{ backgroundColor: "#3583f6" }}
+                    >
                       <FiSearch size={17} color="#FFFFFF" />
                     </button>
-                    <button className="action" style={{ backgroundColor: "#f6a935" }}>
+                    <button
+                      className="action"
+                      style={{ backgroundColor: "#f6a935" }}
+                    >
                       <FiEdit2 size={17} color="#FFFFFF" />
                     </button>
                   </td>

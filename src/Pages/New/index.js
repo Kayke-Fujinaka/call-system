@@ -62,7 +62,7 @@ export default function New() {
 
     await firebase
       .firestore()
-      .collection("users")
+      .collection("chamados")
       .add({
         created: new Date(),
         cliente: customers[customerSelected].nomeEmpresa,
