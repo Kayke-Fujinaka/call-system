@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../../Context/auth";
+import firebase from "../../Services/firebaseConnection";
 
 import Header from "../../Components/Header";
 import Title from "../../Components/Title";
@@ -8,11 +10,71 @@ import { FiPlusCircle } from "react-icons/fi";
 import * as S from "./styles";
 
 export default function New() {
+  const [loadCustomer, setLoadCustomers] = useState(true);
+  const [customers, setCustomers] = useState([]);
+  const [customerSelected, setCustomersSelected] = useState(0);
 
-    function handleRegister(e) {
-        e.preventDefault()
-        alert('Teste')
+  const [assunto, setAssunto] = useState("Suporte");
+  const [status, setStatus] = useState("Aberto");
+  const [complemento, setComplemento] = useState("");
+
+  const { users } = useContext(AuthContext);
+
+  useEffect(() => {
+    async function loadCustomers() {
+      await firebase
+        .firestore()
+        .collection("customers")
+        .get()
+        .then((snapshot) => {
+          let lista = [];
+
+          snapshot.forEach((doc) => {
+            lista.push({
+              id: doc.id,
+              nomeEmpresa: doc.data().nomeEmpresa,
+            });
+          });
+
+          if (lista.length === 0) {
+            console.log("Nenhuma empresa encontrada!");
+            setCustomers([{ id: "1", nomeEmpresa: "FREELA" }]);
+            setLoadCustomers(false);
+            return;
+          }
+
+          setCustomers(lista);
+          setLoadCustomers(false);
+        })
+        .catch((error) => {
+          console.log("Deu algum erro", error);
+          setLoadCustomers(false);
+          setCustomers([{ id: "1", nomeEmpresa: "" }]);
+        });
     }
+
+    loadCustomers();
+  }, []);
+
+  function handleRegister(e) {
+    e.preventDefault();
+    alert("Teste");
+  }
+
+  // Chamada Quando Troca o Assunto
+  function handleChangeSelect(e) {
+    setAssunto(e.target.value);
+  }
+
+  // Chamada Quando Troca o Status
+  function handleOptionChange(e) {
+    setStatus(e.target.value);
+  }
+
+  // Chamada Quando Troca de Cliente
+  function handleChangeCustomers(e) {
+    setCustomersSelected(e.target.value);
+  }
 
   return (
     <div>
@@ -26,14 +88,27 @@ export default function New() {
         <S.Container>
           <form className="form-profile" onSubmit={handleRegister}>
             <label>Cliente</label>
-            <select>
-              <option key={1} value={1}>
-                Sujeito Programador
-              </option>
-            </select>
+
+            {loadCustomer ? (
+              <input
+                type="text"
+                disabled={true}
+                value="Carregando Clientes..."
+              />
+            ) : (
+              <select value={customerSelected} onChange={handleChangeCustomers}>
+                {customers.map((item, index) => {
+                  return (
+                    <option key={item.id} value={index}>
+                      {item.nomeEmpresa}
+                    </option>
+                  );
+                })}
+              </select>
+            )}
 
             <label>Assunto</label>
-            <select>
+            <select value={assunto} onChange={handleChangeSelect}>
               <option value="Suporte">Suporte</option>
               <option value="Visita Tecnica">Visita Tecnica</option>
               <option value="Financeiro">Financeiro</option>
@@ -41,20 +116,40 @@ export default function New() {
 
             <label>Status</label>
             <div className="status">
-              <input type="radio" name="radio" value="Aberto" />
+              <input
+                type="radio"
+                name="radio"
+                value="Aberto"
+                onChange={handleOptionChange}
+                checked={status === "Aberto"}
+              />
               <span>Em Aberto</span>
 
-              <input type="radio" name="radio" value="Progresso" />
+              <input
+                type="radio"
+                name="radio"
+                value="Progresso"
+                onChange={handleOptionChange}
+                checked={status === "Progresso"}
+              />
               <span>Progresso</span>
 
-              <input type="radio" name="radio" value="Atendido" />
+              <input
+                type="radio"
+                name="radio"
+                value="Atendido"
+                onChange={handleOptionChange}
+                checked={status === "Atendido"}
+              />
               <span>Atendido</span>
             </div>
 
-            <label>Complemento</label>
+            <label className="complemento">Complemento</label>
             <textarea
               type="text"
               placeholder="Descreve o seu problema (Opcional)"
+              value={complemento}
+              onChange={(e) => setComplemento(e.target.value)}
             />
 
             <button type="submit">Registrar</button>

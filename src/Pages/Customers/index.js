@@ -22,9 +22,9 @@ export default function Customers() {
         .firestore()
         .collection("customers")
         .add({
-          NomeEmpresa: nomeEmpresa,
-          CNPJ: cnpjEmpresa,
-          Endereço: enderecoEmpresa,
+          nomeEmpresa: nomeEmpresa,
+          cnpj: cnpjEmpresa,
+          endereço: enderecoEmpresa,
         })
         .then(() => {
           setNomeEmpresa("");
