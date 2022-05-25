@@ -104,3 +104,14 @@ export const Table = styled.table`
     border: none;
   }
 `;
+
+export const BtnMore = styled.button`
+  margin-block: 1.5em;
+  padding: .5em 1em;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #181c2e;
+  color: #FFF;
+  font-size: 1.1em;
+`
