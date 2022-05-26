@@ -5,6 +5,7 @@ import { format } from "date-fns";
 
 import Header from "../../Components/Header";
 import Title from "../../Components/Title";
+import Modal from "../../Components/Modal";
 
 import { FiMessageSquare, FiPlus, FiSearch, FiEdit2 } from "react-icons/fi";
 
@@ -24,8 +25,6 @@ export default function Dashboard() {
 
   const [showPostModal, setShowPostModal] = useState(false);
   const [detail, setDetail] = useState();
-
-  console.log(chamados);
 
   useEffect(() => {
     async function loadChamados() {
@@ -90,8 +89,8 @@ export default function Dashboard() {
   }
 
   function togglePostModal(item) {
-    setShowPostModal(!showPostModal)
-    setDetail(item)
+    setShowPostModal(!showPostModal); //troca de true pra false
+    setDetail(item);
   }
 
   if (loading) {
@@ -201,6 +200,8 @@ export default function Dashboard() {
           </>
         )}
       </div>
+
+      {showPostModal && <Modal conteudo={detail} close={togglePostModal} />}
     </div>
   );
 }
