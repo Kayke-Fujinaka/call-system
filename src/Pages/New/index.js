@@ -175,6 +175,7 @@ export default function New() {
               type="text"
               placeholder="Descreve o seu problema (Opcional)"
               value={complemento}
+              maxLength="500"
               onChange={(e) => setComplemento(e.target.value)}
             />
 

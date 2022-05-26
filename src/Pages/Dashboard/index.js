@@ -88,10 +88,10 @@ export default function Dashboard() {
       });
   }
 
-  function togglePostModal(item) {
-    setShowPostModal(!showPostModal); //troca de true pra false
+  function togglePostModal(item){
+    setShowPostModal(!showPostModal) //troca de true pra false
     setDetail(item);
-  }
+}
 
   if (loading) {
     return (
@@ -166,7 +166,7 @@ export default function Dashboard() {
                         <button
                           className="action"
                           style={{ backgroundColor: "#3583f6" }}
-                          onClick={() => togglePostModal(item)}
+                          onClick={()=> togglePostModal(item)}
                         >
                           <FiSearch size={17} color="#FFFFFF" />
                         </button>
