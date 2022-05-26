@@ -22,28 +22,31 @@ export default function Dashboard() {
   const [isEmpty, setIsEmpty] = useState(false);
   const [lastDocs, setLastDocs] = useState();
 
-  console.log(chamados)
+  const [showPostModal, setShowPostModal] = useState(false);
+  const [detail, setDetail] = useState();
+
+  console.log(chamados);
 
   useEffect(() => {
+    async function loadChamados() {
+      await listRef
+        .limit(5)
+        .get()
+        .then((snapshot) => {
+          updateState(snapshot);
+        })
+        .catch((error) => {
+          console.log("Ocorreu algum erro:", error);
+          setLoadingMore(false);
+        });
+
+      setLoading(false);
+    }
+
     loadChamados();
 
     return () => {};
   }, []);
-
-  async function loadChamados() {
-    await listRef
-      .limit(5)
-      .get()
-      .then((snapshot) => {
-        updateState(snapshot);
-      })
-      .catch((error) => {
-        console.log("Ocorreu algum erro:", error);
-        setLoadingMore(false);
-      });
-
-    setLoading(false);
-  }
 
   async function updateState(snapshot) {
     const isCollectionEmpty = snapshot.size === 0;
@@ -76,14 +79,19 @@ export default function Dashboard() {
   }
 
   async function handleMore() {
-    setLoadingMore(true)
+    setLoadingMore(true);
     await listRef
-    .startAfter(lastDocs)
-    .limit(5)
-    .get()
-    .then((snapshot) => {
-      updateState(snapshot)
-    })
+      .startAfter(lastDocs)
+      .limit(5)
+      .get()
+      .then((snapshot) => {
+        updateState(snapshot);
+      });
+  }
+
+  function togglePostModal(item) {
+    setShowPostModal(!showPostModal)
+    setDetail(item)
   }
 
   if (loading) {
@@ -159,6 +167,7 @@ export default function Dashboard() {
                         <button
                           className="action"
                           style={{ backgroundColor: "#3583f6" }}
+                          onClick={() => togglePostModal(item)}
                         >
                           <FiSearch size={17} color="#FFFFFF" />
                         </button>
@@ -181,7 +190,13 @@ export default function Dashboard() {
               </h3>
             )}
             {!loadingMore && !isEmpty && (
-              <S.BtnMore onClick={() => {handleMore()}}>Buscar mais</S.BtnMore>
+              <S.BtnMore
+                onClick={() => {
+                  handleMore();
+                }}
+              >
+                Buscar mais
+              </S.BtnMore>
             )}
           </>
         )}
