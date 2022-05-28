@@ -36,6 +36,7 @@ O site tem no total 5 páginas, sendo elas:
 - **Login:** A página para fazer o Login e ter acesso ao site.
 - **Registro:** A página que tem a funcionalidade de cadastrar os usuários no site e assim ter acesso as outras páginas privadas.
 - **Dashboard (Privada):** A página que tem a funcionalidade de registrar chamados.
+- **Novo Chamado (Privada):** A página que tem a função de adicionar um novo chamado no Dashboard.
 - **Customers (Privada):** A página que tem a funcionalidade de cadastrar uma empresa, colocando o nome da empresa, CPNJ e o endereço da empresa.
 - **Profile (Privada):** A página que apresenta as informações (nome, email e avatar) do usuário cadastrado, a qual possui a funcionalidade de edita-las, exceto o e-mail.
 
