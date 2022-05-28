@@ -1,6 +1,6 @@
 <h1 align="center">📞 CALL SYSTEM (Em progresso...)</h1>
 
-<img src="https://www.acheicampos.com.br/uploads/advertiser/default_anunciante_thumbnail.png" alt="Descrição da imagem">
+<img src="./src/Assets/gif.gif" alt="Descrição da imagem">
 
 > 🔎 O Call System ou Sistema de Chamados é uma ferramenta utilizada para centralizar demandas dos usuários. Ele serve para estabelecer uma rotina de gerenciamento dessas solicitações.
 
@@ -44,7 +44,6 @@ O site tem no total 5 páginas, sendo elas:
 
 :heavy_check_mark: Estilos Globais do Projeto\
 :heavy_check_mark: Adicionando Firebase\
-:heavy_check_mark: Adicionando Styled-Components\
 :heavy_check_mark: Página/Rotas do Login e Registro\
 :heavy_check_mark: Estruturação/Estilização do Login e Registro\
 :heavy_check_mark: Página/Rota do Dashboard (Rota Privada)\
@@ -70,7 +69,7 @@ O site tem no total 5 páginas, sendo elas:
 :x: Projeto Finalizado
 
 --- ⚙️ Extra ---\
-:x: Exemplo 1\
+:heavy_check_mark: Adicionando Styled-Components\
 :x: Exemplo 2
 
 ## 🚀 Tecnologias
