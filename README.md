@@ -61,10 +61,11 @@ O site tem no total 5 páginas, sendo elas:
 :heavy_check_mark: Registrar uma Empresa no Customers\
 :heavy_check_mark: Refatoração do Dashboard\
 :heavy_check_mark: Estruturação/Estilização do Dashboard\
-:heavy_check_mark: Exemplo 1\
-:heavy_check_mark: Exemplo 2\
-:heavy_check_mark: Exemplo 3\
-:heavy_check_mark: Exemplo 4\
+:heavy_check_mark: Página/Rota do New (Rota Privada)\
+:heavy_check_mark: Funções na página para novos chamados\
+:heavy_check_mark: Opção de buscar chamado no Dashboard\
+:heavy_check_mark: Estruturação/Estilização do Modal\
+:heavy_check_mark: Editar chamado\
 :heavy_check_mark: Exemplo 5\
 :x: Projeto Finalizado
 
@@ -82,6 +83,7 @@ O site tem no total 5 páginas, sendo elas:
 - [AuthContext](https://blog.rocketseat.com.br/autenticacao-no-react-native-reactjs-com-context-api-hooks/)
 - [Firebase](https://firebase.google.com/docs)
 - [Styled Components](https://styled-components.com)
+- [Date-fns](https://date-fns.org/docs/Getting-Started)
 
 ## :closed_book: Como usar?
 
