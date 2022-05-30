@@ -24,7 +24,7 @@ html, body, #root {
 
 body {
     font: 1.4rem 'Roboto', sans-serif;
-    background-color: ${theme.white3};
+    background-color: ${theme.white2};
 }
 
 a {

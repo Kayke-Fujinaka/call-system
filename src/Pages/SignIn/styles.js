@@ -20,18 +20,9 @@ export const Form = styled.form`
     padding-inline: 1.5rem;
     font-size: 1.4rem;
     color: ${theme.white};
-    background-color: #252a34;
+    background-color: ${theme.inputBack};
   }
   input::placeholder {
     color: ${theme.white};
-  }
-  button {
-    margin-block: 1rem 1.5rem;
-    font-size: 1.8rem;
-    color: ${theme.white};
-    background-color: #526eff;
-  }
-  button:hover {
-    filter: brightness(0.95);
   }
 `;

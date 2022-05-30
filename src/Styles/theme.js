@@ -1,14 +1,10 @@
 const colors = {
-  black: "#191919",
-  black2: "#232323",
-  gray: "#3f3f3f",
-  gray2: "#696969",
-  gray3: "#898989",
-  gray4: "#cecece",
   white: "#ffffff",
-  white2: "#ECF0F1",
-  white3: "#EFEFEF",
-  white4: "#e5e5e5",
+  white2: "#EFEFEF",
+
+  inputBack: "#252a34",
+
+  blue: "#526eff",
 };
 
 const fonts = {

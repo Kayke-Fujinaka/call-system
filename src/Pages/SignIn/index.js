@@ -4,6 +4,8 @@ import { AuthContext } from "../../Context/auth";
 
 import * as S from "./styles";
 
+import ButtonSign from "../../Components/ButtonSign";
+
 const linkStyle = {
   marginLeft: "0.5rem",
   textDecoration: "none",
@@ -45,9 +47,9 @@ export default function SignIn() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">
+          <ButtonSign>
             {loadingAuth ? "Carregando..." : "Entrar"}
-          </button>
+          </ButtonSign>
         </S.Form>
 
         <p>
