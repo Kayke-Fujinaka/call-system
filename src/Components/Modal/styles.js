@@ -7,7 +7,7 @@ export const Modal = styled.div`
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  z-index: 3;
 
   h3 {
     padding-block: 0 0.5em;

@@ -63,7 +63,7 @@ export const AvatarLabel = styled.label`
   cursor: pointer;
   span {
     position: absolute;
-    z-index: 100;
+    z-index: 2;
     opacity: 0.6;
     transition: all 0.5s;
   }

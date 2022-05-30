@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/auth";
 import { toast } from "react-toastify";
 
-import * as S from "./styles";
-
+import SignTitle from "../../Components/SignTitle";
 import SignForm from "../../Components/SignForm";
 import SignInput from "../../Components/SignInput";
 import SignButton from "../../Components/SignButton";
@@ -49,7 +48,7 @@ export default function SignUp() {
   return (
     <div className="wrapper">
       <div className="mainContainer">
-        <S.H1>Faça o seu Registro</S.H1>
+        <SignTitle>Faça o seu Registro</SignTitle>
 
         <SignForm handleSubmit={handleSubmit}>
           <SignInput
