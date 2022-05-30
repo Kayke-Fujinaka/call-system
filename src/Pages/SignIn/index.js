@@ -4,6 +4,7 @@ import { AuthContext } from "../../Context/auth";
 
 import * as S from "./styles";
 
+import InputSign from "../../Components/InputSign";
 import ButtonSign from "../../Components/ButtonSign";
 
 const linkStyle = {
@@ -26,26 +27,34 @@ export default function SignIn() {
     }
   }
 
+  function handleOnChange(value, type) {
+    if(type === "email"){
+      setEmail(value)
+      return
+    }
+    setPassword(value)
+  }
+
   return (
     <div className="wrapper">
       <div className="mainContainer">
         <S.H1>Faça o seu Login</S.H1>
 
         <S.Form onSubmit={handleSubmit}>
-          <input
+          <InputSign
             type="text"
             name="email"
             placeholder="Email"
             autoComplete="off"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            handleOnChange={(e) => handleOnChange(e.target.value,`email`)}
           />
-          <input
+          <InputSign
             type="password"
             name="password"
             placeholder="Senha"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            handleOnChange={(e) => handleOnChange(e.target.value,`password`)}
           />
           <ButtonSign>
             {loadingAuth ? "Carregando..." : "Entrar"}
