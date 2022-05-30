@@ -28,11 +28,11 @@ export default function SignIn() {
   }
 
   function handleOnChange(value, type) {
-    if(type === "email"){
-      setEmail(value)
-      return
+    if (type === "email") {
+      setEmail(value);
+      return;
     }
-    setPassword(value)
+    setPassword(value);
   }
 
   return (
@@ -47,16 +47,16 @@ export default function SignIn() {
             placeholder="Email"
             autoComplete="off"
             value={email}
-            handleOnChange={(e) => handleOnChange(e.target.value,`email`)}
+            handleOnChange={(e) => handleOnChange(e.target.value, `email`)}
           />
           <InputSign
             type="password"
             name="password"
             placeholder="Senha"
             value={password}
-            handleOnChange={(e) => handleOnChange(e.target.value,`password`)}
+            handleOnChange={(e) => handleOnChange(e.target.value, `password`)}
           />
-          <ButtonSign>
+          <ButtonSign type="submit">
             {loadingAuth ? "Carregando..." : "Entrar"}
           </ButtonSign>
         </S.Form>
