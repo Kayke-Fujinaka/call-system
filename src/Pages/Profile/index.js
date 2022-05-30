@@ -101,7 +101,7 @@ export default function Profile() {
       <Header />
 
       <div className="content">
-        <Title name="Meu perfil">
+        <Title name="Configurações">
           <FiSettings size={25} />
         </Title>
 
