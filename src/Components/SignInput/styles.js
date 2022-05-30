@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import theme from "../../Styles/theme";
 
-export const InputSign = styled.input`
+export const SignInput = styled.input`
   height: 4.5rem;
   padding-inline: 1.5rem;
 

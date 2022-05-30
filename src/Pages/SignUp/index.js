@@ -1,11 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/auth";
+import { toast } from "react-toastify";
 
 import * as S from "./styles";
 
-import InputSign from "../../Components/InputSign";
-import ButtonSign from "../../Components/ButtonSign";
+import SignForm from "../../Components/SignForm";
+import SignInput from "../../Components/SignInput";
+import SignButton from "../../Components/SignButton";
 
 const linkStyle = {
   marginLeft: "0.5rem",
@@ -25,6 +27,10 @@ export default function SignUp() {
 
     if (nome !== "" && email !== "" && password !== "") {
       signUp(email, password, nome);
+    } else {
+      toast.error("Ops! Preencha os campos!", {
+        theme: "dark",
+      });
     }
   }
 
@@ -45,8 +51,8 @@ export default function SignUp() {
       <div className="mainContainer">
         <S.H1>Faça o seu Registro</S.H1>
 
-        <S.Form onSubmit={handleSubmit}>
-          <InputSign
+        <SignForm handleSubmit={handleSubmit}>
+          <SignInput
             type="text"
             name="name"
             placeholder="Nome"
@@ -54,7 +60,7 @@ export default function SignUp() {
             value={nome}
             handleOnChange={(e) => handleOnChange(e.target.value, `name`)}
           />
-          <InputSign
+          <SignInput
             type="text"
             name="email"
             placeholder="Email"
@@ -62,15 +68,15 @@ export default function SignUp() {
             value={email}
             handleOnChange={(e) => handleOnChange(e.target.value, `email`)}
           />
-          <InputSign
+          <SignInput
             type="password"
             name="password"
             placeholder="Senha"
             value={password}
             handleOnChange={(e) => handleOnChange(e.target.value, `password`)}
           />
-          <ButtonSign>{loadingAuth ? "Carregando..." : "Cadastrar"}</ButtonSign>
-        </S.Form>
+          <SignButton type="submit">{loadingAuth ? "Carregando..." : "Cadastrar"}</SignButton>
+        </SignForm>
 
         <p>
           Você já possui uma conta?

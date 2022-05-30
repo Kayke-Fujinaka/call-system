@@ -1,11 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/auth";
+import { toast } from "react-toastify";
 
 import * as S from "./styles";
 
-import InputSign from "../../Components/InputSign";
-import ButtonSign from "../../Components/ButtonSign";
+import SignForm from "../../Components/SignForm";
+import SignInput from "../../Components/SignInput";
+import SignButton from "../../Components/SignButton";
 
 const linkStyle = {
   marginLeft: "0.5rem",
@@ -24,6 +26,10 @@ export default function SignIn() {
 
     if (email !== "" && password !== "") {
       signIn(email, password);
+    } else {
+      toast.error("Ops! Preencha os campos!", {
+        theme: "dark",
+      });
     }
   }
 
@@ -40,8 +46,8 @@ export default function SignIn() {
       <div className="mainContainer">
         <S.H1>Faça o seu Login</S.H1>
 
-        <S.Form onSubmit={handleSubmit}>
-          <InputSign
+        <SignForm handleSubmit={handleSubmit}>
+          <SignInput
             type="text"
             name="email"
             placeholder="Email"
@@ -49,17 +55,17 @@ export default function SignIn() {
             value={email}
             handleOnChange={(e) => handleOnChange(e.target.value, `email`)}
           />
-          <InputSign
+          <SignInput
             type="password"
             name="password"
             placeholder="Senha"
             value={password}
             handleOnChange={(e) => handleOnChange(e.target.value, `password`)}
           />
-          <ButtonSign type="submit">
+          <SignButton type="submit">
             {loadingAuth ? "Carregando..." : "Entrar"}
-          </ButtonSign>
-        </S.Form>
+          </SignButton>
+        </SignForm>
 
         <p>
           Ainda não tem uma conta?

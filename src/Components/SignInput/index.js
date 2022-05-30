@@ -2,7 +2,7 @@ import React from "react";
 
 import * as S from "./styles";
 
-export default function InputSign({
+export default function SignInput({
   type,
   name,
   placeholder,
@@ -10,7 +10,7 @@ export default function InputSign({
   value,
   handleOnChange,
 }) {
-  return <S.InputSign 
+  return <S.SignInput 
     type={type}
     name={name}
     placeholder={placeholder}
