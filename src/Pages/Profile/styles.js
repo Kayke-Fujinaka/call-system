@@ -43,6 +43,12 @@ export const Container = styled.div`
     background-color: transparent;
     border: 0.1rem solid #121212;
     border-radius: 0.5rem;
+    transition: all ease 0.25s;
+    &:hover {
+      background-color: #E73936;
+      border: 0.1rem solid #E73936;
+      color: #FFF;
+    }
   }
 `;
 
