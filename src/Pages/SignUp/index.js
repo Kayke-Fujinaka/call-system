@@ -1,12 +1,13 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/auth";
-import { toast } from "react-toastify";
 
 import SignTitle from "../../Components/SignTitle";
 import SignForm from "../../Components/SignForm";
 import SignInput from "../../Components/SignInput";
 import SignButton from "../../Components/SignButton";
+
+import { toast } from "react-toastify";
 
 const linkStyle = {
   marginLeft: "0.5rem",

@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../Context/auth";
-import firebase from "../../Services/firebaseConnection";
 import { useHistory, useParams } from "react-router-dom";
+import firebase from "../../Services/firebaseConnection";
 
 import Header from "../../Components/Header";
 import Title from "../../Components/Title";
@@ -78,7 +78,9 @@ export default function New() {
         setStatus(snapshot.data().status);
         setComplemento(snapshot.data().complemento);
 
-        let index = lista.findIndex(item => item.id === snapshot.data().clienteId );
+        let index = lista.findIndex(
+          (item) => item.id === snapshot.data().clienteId
+        );
         setCustomersSelected(index);
         setIdCostumer(true);
       })

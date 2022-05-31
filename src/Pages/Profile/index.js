@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
-import { FiSettings, FiUpload } from "react-icons/fi";
+import { AuthContext } from "../../Context/auth";
+import firebase from "../../Services/firebaseConnection";
 
 import Header from "../../Components/Header";
 import Title from "../../Components/Title";
 
-import { AuthContext } from "../../Context/auth";
-import firebase from "../../Services/firebaseConnection";
+import { FiSettings, FiUpload } from "react-icons/fi";
 import avatar from "../../Assets/avatar.png";
 
 import * as S from "./styles";
