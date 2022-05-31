@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../Styles/theme";
 import cover from "../../Assets/cover.png";
 
 export const Sidebar = styled.div`
@@ -6,7 +7,7 @@ export const Sidebar = styled.div`
   height: 100%;
   width: 20rem;
 
-  background-color: #181c2e;
+  background-color: ${theme.buttonDarkBlue};
 
   overflow: auto;
 
@@ -33,8 +34,8 @@ export const Sidebar = styled.div`
     }
   }
   a:hover {
-    background-color: #121212;
-    color: #fff;
+    background-color: ${theme.black};
+    color: ${theme.white};
   }
   @media (max-width: 700px) {
     position: relative;
@@ -47,7 +48,7 @@ export const HeaderImgWrapper = styled.div`
   height: 15rem;
   padding-top: 3rem;
 
-  background: #181c2e url(${cover}) center no-repeat;
+  background: ${theme.buttonDarkBlue} url(${cover}) center no-repeat;
   background-size: cover;
   
   img {
@@ -59,8 +60,8 @@ export const HeaderImgWrapper = styled.div`
     
     border-radius: 50%;
     object-fit: cover;
-    filter: drop-shadow(0.2rem 0.3rem 0.6rem #121212);
-    -webkit-filter: drop-shadow(0.2rem 0.3rem 0.6rem #121212);
+    filter: drop-shadow(0.2rem 0.3rem 0.6rem ${theme.black});
+    -webkit-filter: drop-shadow(0.2rem 0.3rem 0.6rem ${theme.black});
   }
   @media (max-width: 700px) {
     display: none;

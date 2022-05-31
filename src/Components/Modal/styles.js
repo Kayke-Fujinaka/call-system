@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../Styles/theme";
 
 export const Modal = styled.div`
   position: fixed;
@@ -34,7 +35,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 4em 2em;
 
-  background-color: #f8f8f8;
+  background-color: ${theme.contBack};
   border-radius: 0.5rem;
 
   .close {
@@ -48,8 +49,8 @@ export const Container = styled.div`
     top: 1.5rem;
     left: 1.5rem;
 
-    color: #ffff;
-    background-color: #dc3545;
+    color: ${theme.white};
+    background-color: ${theme.red};
     border: 0;
 
     svg {
@@ -67,14 +68,14 @@ export const Container = styled.div`
   }
 
   span {
-    font-weight: bold;
     font-size: 1.2em;
-    color: #121212;
+    font-weight: ${theme.fonts.weight.bold};
+    color: ${theme.black};
 
     i {
       margin-right: 1em;
       padding: 0.2rem 0.5rem;
-      font-weight: 400;
+      font-weight: ${theme.fonts.weight.medium};
     }
   }
 `;

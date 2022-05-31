@@ -1,12 +1,14 @@
 const colors = {
   white: "#ffffff",
   white2: "#EFEFEF",
-
-  contBack: "#f8f8f8",
-
-  inputBack: "#252a34",
+  black: "#121212",
 
   blue: "#526eff",
+  red: "#dc3545",
+
+  contBack: "#f8f8f8",
+  inputBack: "#252a34",
+  buttonDarkBlue: "#181c2e",
 };
 
 const fonts = {
