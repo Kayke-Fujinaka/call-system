@@ -10,12 +10,14 @@ export default function SignInput({
   value,
   handleOnChange,
 }) {
-  return <S.SignInput 
-    type={type}
-    name={name}
-    placeholder={placeholder}
-    autoComplete={autoComplete}
-    value={value}
-    onChange={handleOnChange}
-  />;
+  return (
+    <S.SignInput
+      type={type}
+      name={name}
+      placeholder={placeholder}
+      autoComplete={autoComplete}
+      value={value}
+      onChange={handleOnChange}
+    />
+  );
 }

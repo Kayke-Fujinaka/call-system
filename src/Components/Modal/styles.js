@@ -12,7 +12,7 @@ export const Modal = styled.div`
   h3 {
     padding-block: 0 0.5em;
   }
-  
+
   p {
     word-break: break-all;
     font-style: italic;
