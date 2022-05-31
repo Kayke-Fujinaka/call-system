@@ -77,7 +77,7 @@ export default function AuthProvider({ children }) {
           .set({
             nome: nome,
             avatarURL: null,
-            email: email
+            email: email,
           })
           .then(() => {
             let data = {
