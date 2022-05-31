@@ -6,16 +6,17 @@ export const Modal = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 3;
+
+  background: rgba(0, 0, 0, 0.5);
 
   h3 {
     padding-block: 0 0.5em;
   }
 
   p {
-    word-break: break-all;
     font-style: italic;
+    word-break: break-all;
   }
 `;
 
@@ -37,16 +38,19 @@ export const Container = styled.div`
   border-radius: 0.5rem;
 
   .close {
-    background-color: #dc3545;
-    border: 0;
-    color: #ffff;
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 0.4rem 1rem;
+
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+
+    color: #ffff;
+    background-color: #dc3545;
+    border: 0;
 
     svg {
       margin-right: 0.5rem;
@@ -68,9 +72,9 @@ export const Container = styled.div`
     color: #121212;
 
     i {
-      font-weight: 400;
       margin-right: 1em;
       padding: 0.2rem 0.5rem;
+      font-weight: 400;
     }
   }
 `;
