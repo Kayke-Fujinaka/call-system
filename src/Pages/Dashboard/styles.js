@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../Styles/theme";
 
 export const Table = styled.table`
   width: 100%;
@@ -6,21 +7,18 @@ export const Table = styled.table`
   margin: 0;
   padding: 0;
 
-  border: 0.1rem solid #ccc;
   border-collapse: collapse;
-
-  table-layout: fixed;
 
   caption {
     margin-block: 0.5em 0.75em;
     font-size: 1.5em;
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
       font-size: 1.3rem;
     }
   }
 
   thead {
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
       position: absolute;
 
       height: 0.1rem;
@@ -37,12 +35,12 @@ export const Table = styled.table`
 
   tr {
     padding: 0.35em;
-    border: 0.1rem solid #ddd;
-    background-color: #f8f8f8;
-    @media (max-width: 700px) {
+    border: 0.1rem solid ${theme.border};
+    background-color: ${theme.contBack};
+    @media (max-width: 750px) {
       display: block;
       margin-bottom: 0.65em;
-      border-bottom: 0.3rem solid #ddd;
+      border-bottom: 0.3rem solid ${theme.border};
     }
   }
 
@@ -65,20 +63,23 @@ export const Table = styled.table`
 
       svg {
         vertical-align: middle;
+        color: ${theme.white};
+        font-size: 1.7rem;
       }
     }
 
     .badge {
-      padding: 0.3rem;
-      color: #fff;
+      padding: 0.3rem; 
+      width : 8rem;
+      color: ${theme.white};
       border-radius: 0.3rem;
     }
 
     &::before {
-      @media (max-width: 700px) {
+      @media (max-width: 750px) {
         content: attr(data-label);
         float: left;
-        font-weight: bold;
+        font-weight: ${theme.fonts.weight.bolder};
         text-transform: uppercase;
       }
     }
@@ -86,13 +87,13 @@ export const Table = styled.table`
     &:last-child {
       border-bottom: 0;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
       display: block;
       text-align: right;
 
       font-size: 0.8em;
 
-      border-bottom: 0.1rem solid #ddd;
+      border-bottom: 0.1rem solid ${theme.border};
     }
   }
 
@@ -102,7 +103,7 @@ export const Table = styled.table`
     text-transform: uppercase;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 750px) {
     border: none;
   }
 `;
@@ -113,9 +114,9 @@ export const BtnMore = styled.button`
   padding: 0.5em 1em;
 
   font-size: 1.1em;
-  color: #fff;
+  color: ${theme.white};
 
-  background-color: #181c2e;
+  background-color: ${theme.buttonDarkBlue};
   border: none;
   border-radius: 0.5rem;
 `;

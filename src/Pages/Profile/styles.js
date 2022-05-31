@@ -12,10 +12,15 @@ export const AvatarLabel = styled.label`
 
   cursor: pointer;
 
+  svg {
+    color: ${theme.white};
+    font-size: 2.4rem;
+  }
+
   span {
     position: absolute;
     z-index: 2;
-    opacity: 0.6;
+    opacity: 0.4;
     transition: all 0.5s;
 
     &:hover {
@@ -40,14 +45,14 @@ export const LogoutBtn = styled.button`
 
   font-size: 1.2em;
   background-color: transparent;
-  border: 0.1rem solid #121212;
+  border: 0.1rem solid ${theme.black};
   border-radius: 0.5rem;
 
   transition: all ease 0.25s;
 
   &:hover {
-    background-color: #e73936;
-    border: 0.1rem solid #e73936;
-    color: #fff;
+    background-color: ${theme.red};
+    border: 0.1rem solid ${theme.red};
+    color: ${theme.white};
   }
 `;

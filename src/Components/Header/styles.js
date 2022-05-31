@@ -18,7 +18,7 @@ export const Sidebar = styled.div`
 
     padding: 1.6rem;
 
-    color: rgba(255, 255, 255, 0.7);
+    color: ${theme.border};
     text-decoration: none;
 
     transition: ease-in-out 0.4s;
@@ -37,6 +37,12 @@ export const Sidebar = styled.div`
     background-color: ${theme.black};
     color: ${theme.white};
   }
+
+  svg {
+    color: ${theme.white};
+    font-size: 2.4rem;
+  }
+
   @media (max-width: 700px) {
     position: relative;
     width: 100%;

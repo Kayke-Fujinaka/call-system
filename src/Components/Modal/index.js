@@ -9,7 +9,7 @@ export default function Modal({ conteudo, close }) {
     <S.Modal>
       <S.Container>
         <button className="close" onClick={close}>
-          <FiX size={23} color="#ffffff" />
+          <FiX/>
           Voltar
         </button>
 
@@ -30,11 +30,10 @@ export default function Modal({ conteudo, close }) {
             </span>
           </div>
           <div className="row">
-            <span>
+            <span className="stats">
               Status:{" "}
               <i
                 style={{
-                  color: "#FFF",
                   backgroundColor:
                     conteudo.status === "Aberto" ? "#5cb85b" : "#999",
                 }}

@@ -48,7 +48,7 @@ button {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #1C1E28;
+    background-color: ${theme.backg1};
     color: ${theme.white};
 }
 
@@ -60,8 +60,9 @@ button {
     width: 100%;
     height: 100%;
     padding: 3.5rem;
-    background-color: #191921;
+    background-color: ${theme.backg2};
     border-radius: 1rem;
+    
     @media (min-width: 600px) {
         width: min(60rem, 100%);
         height: min(55rem, 100%);
@@ -95,6 +96,13 @@ textarea {
     gap: 0.75rem;
 }
 
+/* ---------- SVG (React Icons) ---------- */
+
+svg.plus {
+    color: ${theme.white};
+    font-size: 2.4rem;
+}
+
 /* ---------- NEW (Novo Chamado) ---------- */
 
 .new {
@@ -107,8 +115,8 @@ textarea {
     padding: 0.5em;
 
     font-size: 1.2em;
-    font-weight: 500;
-    color: #ffffff;
+    font-weight: ${theme.fonts.weight.bold};
+    color: ${theme.white};
 
     border: none;
     border-radius: 0.6rem;

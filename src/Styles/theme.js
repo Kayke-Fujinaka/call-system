@@ -4,11 +4,15 @@ const colors = {
   black: "#121212",
 
   blue: "#526eff",
-  red: "#dc3545",
+  red: "#dc3145",
+
+  backg1: "#1C1E28",
+  backg2: "#191921",
 
   contBack: "#f8f8f8",
   inputBack: "#252a34",
   buttonDarkBlue: "#181c2e",
+  border: "#ddd",
 };
 
 const fonts = {

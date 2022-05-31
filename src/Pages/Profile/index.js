@@ -114,7 +114,7 @@ export default function Profile() {
           <PrivateForm handleSave={handleSave}>
             <S.AvatarLabel>
               <span>
-                <FiUpload color="#FFF" size={25} />
+                <FiUpload />
               </span>
               <input type="file" accept="image/*" onChange={handleFile} />{" "}
               <br />

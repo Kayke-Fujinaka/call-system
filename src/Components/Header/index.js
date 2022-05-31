@@ -20,15 +20,15 @@ export default function Header() {
       </S.HeaderImgWrapper>
 
       <Link to="/dashboard">
-        <FiHome color="#FFF" size={24} />
+        <FiHome/>
         Chamados
       </Link>
       <Link to="/customers">
-        <FiUser color="#FFF" size={24} />
+        <FiUser/>
         Clientes
       </Link>
       <Link to="/profile">
-        <FiSettings color="#FFF" size={24} />
+        <FiSettings/>
         Configurações
       </Link>
     </S.Sidebar>

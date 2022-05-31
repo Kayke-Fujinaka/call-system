@@ -55,6 +55,8 @@ export const Container = styled.div`
 
     svg {
       margin-right: 0.5rem;
+      color: ${theme.white};
+      font-size: 2.3rem;
     }
   }
 
@@ -65,6 +67,12 @@ export const Container = styled.div`
 
   .row {
     margin-bottom: 0.5em;
+
+    .stats {
+      i {
+        color: ${theme.white};
+      }
+    }
   }
 
   span {

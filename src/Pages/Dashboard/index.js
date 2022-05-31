@@ -112,6 +112,12 @@ export default function Dashboard() {
     );
   }
 
+  const status = (state) => {
+    if (state === "Atendido") return "#5cb85c";
+    if (state === "Progresso") return "#FFCE02";
+    if (state === "Aberto") return "#dc3145";
+  };
+
   return (
     <div>
       <Header />
@@ -125,14 +131,14 @@ export default function Dashboard() {
             <span>Nenhum chamado registrado...</span>
 
             <Link to="/new" className="new">
-              <FiPlus size={25} color="#FFFFFF" />
+              <FiPlus className="plus" />
               Novo chamado
             </Link>
           </Container>
         ) : (
           <>
             <Link to="/new" className="new">
-              <FiPlus size={25} color="#FFFFFF" />
+              <FiPlus className="plus" />
               Novo chamado
             </Link>
 
@@ -156,8 +162,7 @@ export default function Dashboard() {
                         <span
                           className="badge"
                           style={{
-                            backgroundColor:
-                              item.status === "Aberto" ? "#5cb85c" : "#999",
+                            backgroundColor: status(item.status),
                           }}
                         >
                           {item.status}
@@ -170,14 +175,14 @@ export default function Dashboard() {
                           style={{ backgroundColor: "#3583f6" }}
                           onClick={() => togglePostModal(item)}
                         >
-                          <FiSearch size={17} color="#FFFFFF" />
+                          <FiSearch />
                         </button>
                         <Link
                           className="action"
                           style={{ backgroundColor: "#f6a935" }}
                           to={`/new/${item.id}`}
                         >
-                          <FiEdit2 size={17} color="#FFFFFF" />
+                          <FiEdit2 />
                         </Link>
                       </td>
                     </tr>
