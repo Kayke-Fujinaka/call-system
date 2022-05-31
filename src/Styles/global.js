@@ -8,10 +8,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-}
 
-*:focus {
+    &:focus {
     outline: 0;
+}
 }
 
 :root {
@@ -91,20 +91,19 @@ div.content {
 
     transition: ease-in 0.1s;
 
+    svg {
+    margin-right: 0.5rem;
+
+    &:hover {
+    filter: brightness(1.05);
+}
+}
+
     @media (max-width: 700px) {
         font-size: 1em;
         padding: 0.3em;
     }
   }
-
-.new svg {
-    margin-right: 0.5rem;
-}
-
-.new:hover {
-    filter: brightness(1.05);
-}
-
 `;
 
 export default GlobalStyle;
