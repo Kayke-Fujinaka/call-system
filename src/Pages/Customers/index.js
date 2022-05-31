@@ -2,19 +2,22 @@ import React, { useState } from "react";
 import firebase from "../../Services/firebaseConnection";
 
 import Header from "../../Components/Header";
+import Content from "../../Components/Content";
+import Container from "../../Components/Container";
 import Title from "../../Components/Title";
+import PrivateForm from "../../Components/PrivateForm";
+import Label from "../../Components/PrivateLabel";
+import PrivateButton from "../../Components/PrivateButton";
 
 import { FiUser } from "react-icons/fi";
 import { toast } from "react-toastify";
-
-import * as S from "./styles";
 
 export default function Customers() {
   const [nomeEmpresa, setNomeEmpresa] = useState("");
   const [cnpjEmpresa, setCnpjEmpresa] = useState("");
   const [enderecoEmpresa, setEnderecoEmpresa] = useState("");
 
-  async function handleAdd(e) {
+  async function handleSave(e) {
     e.preventDefault();
 
     if (nomeEmpresa !== "" && cnpjEmpresa !== "" && enderecoEmpresa !== "") {
@@ -51,14 +54,14 @@ export default function Customers() {
     <div>
       <Header />
 
-      <div className="content">
+      <Content>
         <Title name="Clientes">
           <FiUser size={25} />
         </Title>
 
-        <S.Container>
-          <form className="form-profile customers" onSubmit={handleAdd}>
-            <label>Nome da Empresa</label>
+        <Container>
+          <PrivateForm handleSave={handleSave}>
+            <Label>Nome da Empresa</Label>
             <input
               type="text"
               value={nomeEmpresa}
@@ -66,7 +69,7 @@ export default function Customers() {
               onChange={(e) => setNomeEmpresa(e.target.value)}
             />
 
-            <label>CNPJ</label>
+            <Label>CNPJ</Label>
             <input
               type="text"
               value={cnpjEmpresa}
@@ -74,7 +77,7 @@ export default function Customers() {
               onChange={(e) => setCnpjEmpresa(e.target.value)}
             />
 
-            <label>Endereço da Empresa</label>
+            <Label>Endereço da Empresa</Label>
             <input
               type="text"
               value={enderecoEmpresa}
@@ -82,10 +85,10 @@ export default function Customers() {
               onChange={(e) => setEnderecoEmpresa(e.target.value)}
             />
 
-            <button type="submit">Cadastrar</button>
-          </form>
-        </S.Container>
-      </div>
+            <PrivateButton type="submit">Cadastrar</PrivateButton>
+          </PrivateForm>
+        </Container>
+      </Content>
     </div>
   );
 }

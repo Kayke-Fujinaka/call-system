@@ -4,6 +4,8 @@ import firebase from "../../Services/firebaseConnection";
 import { format } from "date-fns";
 
 import Header from "../../Components/Header";
+import Content from "../../Components/Content";
+import Container from "../../Components/Container";
 import Title from "../../Components/Title";
 import Modal from "../../Components/Modal";
 
@@ -97,15 +99,15 @@ export default function Dashboard() {
     return (
       <div>
         <Header />
-        <div className="content">
+        <Content>
           <Title name="Chamados">
             <FiMessageSquare size={25} />
           </Title>
 
-          <S.Container>
+          <Container>
             <span>Buscando chamados...</span>
-          </S.Container>
-        </div>
+          </Container>
+        </Content>
       </div>
     );
   }
@@ -113,20 +115,20 @@ export default function Dashboard() {
   return (
     <div>
       <Header />
-      <div className="content">
+      <Content>
         <Title name="Chamados">
           <FiMessageSquare size={25} />
         </Title>
 
         {chamados.length === 0 ? (
-          <S.Container>
+          <Container>
             <span>Nenhum chamado registrado...</span>
 
             <Link to="/new" className="new">
               <FiPlus size={25} color="#FFFFFF" />
               Novo chamado
             </Link>
-          </S.Container>
+          </Container>
         ) : (
           <>
             <Link to="/new" className="new">
@@ -200,7 +202,7 @@ export default function Dashboard() {
             )}
           </>
         )}
-      </div>
+      </Content>
 
       {showPostModal && <Modal conteudo={detail} close={togglePostModal} />}
     </div>

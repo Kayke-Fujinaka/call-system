@@ -2,6 +2,8 @@ const colors = {
   white: "#ffffff",
   white2: "#EFEFEF",
 
+  contBack: "#f8f8f8",
+
   inputBack: "#252a34",
 
   blue: "#526eff",

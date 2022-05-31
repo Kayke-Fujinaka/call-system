@@ -4,7 +4,12 @@ import { useHistory, useParams } from "react-router-dom";
 import firebase from "../../Services/firebaseConnection";
 
 import Header from "../../Components/Header";
+import Content from "../../Components/Content";
+import Container from "../../Components/Container";
 import Title from "../../Components/Title";
+import PrivateForm from "../../Components/PrivateForm";
+import Label from "../../Components/PrivateLabel";
+import PrivateButton from "../../Components/PrivateButton";
 
 import { FiPlusCircle } from "react-icons/fi";
 import { toast } from "react-toastify";
@@ -90,7 +95,7 @@ export default function New() {
       });
   }
 
-  async function handleRegister(e) {
+  async function handleSave(e) {
     e.preventDefault();
 
     if (idCostumer) {
@@ -170,14 +175,14 @@ export default function New() {
     <div>
       <Header />
 
-      <div className="content">
+      <Content>
         <Title name="Novo Chamado">
           <FiPlusCircle size={25} />
         </Title>
 
-        <S.Container>
-          <form className="form-profile" onSubmit={handleRegister}>
-            <label>Cliente</label>
+        <Container>
+          <PrivateForm handleSave={handleSave}>
+            <Label>Cliente</Label>
 
             {loadCustomer ? (
               <input
@@ -197,14 +202,14 @@ export default function New() {
               </select>
             )}
 
-            <label>Assunto</label>
+            <Label>Assunto</Label>
             <select value={assunto} onChange={handleChangeSelect}>
               <option value="Suporte">Suporte</option>
               <option value="Visita Tecnica">Visita Tecnica</option>
               <option value="Financeiro">Financeiro</option>
             </select>
 
-            <label>Status</label>
+            <Label>Status</Label>
             <div className="status">
               <input
                 type="radio"
@@ -234,7 +239,7 @@ export default function New() {
               <span>Atendido</span>
             </div>
 
-            <label className="complemento">Complemento</label>
+            <Label className="complemento">Complemento</Label>
             <textarea
               type="text"
               placeholder="Descreve o seu problema (Opcional)"
@@ -243,10 +248,10 @@ export default function New() {
               onChange={(e) => setComplemento(e.target.value)}
             />
 
-            <button type="submit">Registrar</button>
-          </form>
-        </S.Container>
-      </div>
+            <PrivateButton type="submit">Registrar</PrivateButton>
+          </PrivateForm>
+        </Container>
+      </Content>
     </div>
   );
 }

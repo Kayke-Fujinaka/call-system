@@ -3,6 +3,8 @@ import theme from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 
+/* ---------- GLOBAL ---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -39,6 +41,8 @@ button {
     cursor: pointer;
 }
 
+/* ---------- SIGN ---------- */
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -64,13 +68,34 @@ button {
     }
 }
 
-div.content {
-    margin-left: 20rem;
-    padding: 0.1rem 1.6rem;
-    @media (max-width: 700px) {
-        margin-left: 0;
-    }
+/* ---------- INPUT, TEXTAREA, SELECT ---------- */
+
+input,
+textarea,
+select {
+    max-width: 60rem;
+    margin-bottom: 1em;
+    padding: 0.7em;
+
+    border: none;
+    border-radius: 0.5rem;
 }
+
+input:disabled {
+    cursor: not-allowed;
+}
+
+textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.status {
+      display: flex;
+    gap: 0.75rem;
+}
+
+/* ---------- NEW (Novo Chamado) ---------- */
 
 .new {
     display: flex;

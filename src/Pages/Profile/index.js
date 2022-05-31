@@ -3,7 +3,12 @@ import { AuthContext } from "../../Context/auth";
 import firebase from "../../Services/firebaseConnection";
 
 import Header from "../../Components/Header";
+import Content from "../../Components/Content";
+import Container from "../../Components/Container";
 import Title from "../../Components/Title";
+import PrivateForm from "../../Components/PrivateForm";
+import Label from "../../Components/PrivateLabel";
+import PrivateButton from "../../Components/PrivateButton";
 
 import { FiSettings, FiUpload } from "react-icons/fi";
 import avatar from "../../Assets/avatar.png";
@@ -100,13 +105,13 @@ export default function Profile() {
     <div>
       <Header />
 
-      <div className="content">
+      <Content>
         <Title name="Configurações">
           <FiSettings size={25} />
         </Title>
 
-        <S.Container>
-          <form className="form-profile" onSubmit={handleSave}>
+        <Container>
+          <PrivateForm handleSave={handleSave}>
             <S.AvatarLabel>
               <span>
                 <FiUpload color="#FFF" size={25} />
@@ -125,26 +130,24 @@ export default function Profile() {
               )}
             </S.AvatarLabel>
 
-            <label>Nome</label>
+            <Label>Nome</Label>
             <input
               type="text"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
             />
 
-            <label>Email</label>
+            <Label>Email</Label>
             <input type="text" value={email} disabled={true} />
 
-            <button type="submit">Salvar</button>
-          </form>
-        </S.Container>
+            <PrivateButton type="submit">Salvar</PrivateButton>
+          </PrivateForm>
+        </Container>
 
-        <S.Container>
-          <button className="logout-btn" onClick={() => signOut()}>
+          <S.LogoutBtn className="logout-btn" onClick={() => signOut()}>
             Sair
-          </button>
-        </S.Container>
-      </div>
+          </S.LogoutBtn>
+      </Content>
     </div>
   );
 }
