@@ -1,4 +1,4 @@
-<h1 align="center">📞 CALL SYSTEM (Em progresso...)</h1>
+<h1 align="center">📞 CALL SYSTEM</h1>
 
 <img src="./src/Assets/gif.gif" alt="Descrição da imagem">
 
@@ -66,12 +66,10 @@ O site tem no total 5 páginas, sendo elas:
 :heavy_check_mark: Opção de buscar chamado no Dashboard\
 :heavy_check_mark: Estruturação/Estilização do Modal\
 :heavy_check_mark: Editar chamado\
-:heavy_check_mark: Exemplo 5\
-:x: Projeto Finalizado
+:heavy_check_mark: Projeto Finalizado
 
 --- ⚙️ Extra ---\
 :heavy_check_mark: Adicionando Styled-Components\
-:x: Exemplo 2
 
 ## 🚀 Tecnologias
 
