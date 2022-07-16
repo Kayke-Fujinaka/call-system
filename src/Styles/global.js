@@ -128,7 +128,7 @@ svg.plus {
     margin-right: 0.5rem;
 
     &:hover {
-    filter: brightness(1.05);
+    filter: brightness(1.06);
 }
 }
 
