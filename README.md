@@ -69,7 +69,7 @@ O site tem no total 5 páginas, sendo elas:
 :heavy_check_mark: Projeto Finalizado
 
 --- ⚙️ Extra ---\
-:heavy_check_mark: Adicionando Styled-Components\
+:heavy_check_mark: Adicionando Styled-Components
 
 ## 🚀 Tecnologias
 
