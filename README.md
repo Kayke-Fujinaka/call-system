@@ -1,77 +1,76 @@
 <h1 align="center">📞 CALL SYSTEM</h1>
 
-<img src="./src/Assets/gif.gif" alt="Descrição da imagem">
+<img src="./src/Assets/gif.gif" alt="Image description">
 
-> 🔎 O Call System ou Sistema de Chamados é uma ferramenta utilizada para centralizar demandas dos usuários. Ele serve para estabelecer uma rotina de gerenciamento dessas solicitações.
+> 🔎 The Call System or Call System is a tool used to centralize user demands. It serves to establish a management routine for these requests.
 
-🗔 Confira a aplicação: https://www.linkedin.com/in/kayke-fujinaka/
+🗔 Check out the app: https://www.linkedin.com/in/kayke-fujinaka/
 
-## :page_facing_up: Explicação
+## :page_facing_up: Explanation
 
-O projeto foi realizado utilizando o framework [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html) conectando com o [Firebase](https://firebase.google.com/docs) que ajudou na autenticação, cadastro, login e persistência dos dados.
+The project was carried out using the framework [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html) connecting with [Firebase](https://firebase.google.com/docs) which helped with authentication, registration, login and data persistence.
 
-🎲 **Como Funciona o Projeto**
+🎲 **How ​​the Project Works**
 
-Ele serve para estabelecer uma rotina de gerenciamento disponibilizado ao usuário, tendo algumas funcionalidades, como, por exemplo, criar um chamado, cadastrar uma empresa, editar informações do chamados/clientes, editar o perfil e etc.
+It serves to establish a management routine available to the user, having some functionalities, such as, for example, creating a ticket, registering a company, editing ticket/customer information, editing the profile, etc.
 
-O usuário consegue criar clientes ou empresas, a qual vão ser registradas dentro do site, podendo criar chamados depois.
+The user can create clients or companies, which will be registered within the site, being able to create calls later.
 
-Caso o usuário deseje cadastrar um chamado. Ele precisa colocar:
+If the user wants to register a call. He needs to put:
 
-- Qual é o cliente que necessita desse serviço. Assim, vai aparecer uma lista com algumas empresas;
-- O assunto que precisa ser tratado ou discutido;
-- O status do chamado, sendo eles: Em Aberto, Progresso ou Atendido;
-- Completo que serve para descrever melhor o problema, visando ter uma comunicação mais efetiva (Opcional).
+- Which customer needs this service. Thus, a list of some companies will appear;
+- The subject that needs to be addressed or discussed;
+- The status of the call, namely: In Open, In Progress or Answered;
+- Complete that serves to better describe the problem, aiming to have a more effective communication (Optional).
 
-⚠️ **Observações**
+⚠️ **Notes**
 
-O visitante não terá acesso as rotas privadas. Caso não tenha se registrado ou realizado o login no site. Portanto, sempre que tentar acessar pela URL sem estar cadastrado/logado, ele será redirecionado para a página inicial.
+The visitor will not have access to private routes. If you have not registered or logged in to the site. Therefore, whenever he tries to access the URL without being registered/logged in, he will be redirected to the homepage.
 
-Além disso, o usuário não poderá retornar a página inicial quando já estiver logado. Dessa maneira, ele necessitará deslogar na página Profile para retornar a tela de Login ou Registro.
+In addition, the user will not be able to return to the home page when already logged in. Thus, he will need to log out on the Profile page to return to the Login or Registration screen.
 
-## 📁 Páginas
+## 📁 Pages
 
-O site tem no total 5 páginas, sendo elas:
+The site has a total of 5 pages, which are:
 
-- **Login:** A página para fazer o Login e ter acesso ao site.
-- **Registro:** A página que tem a funcionalidade de cadastrar os usuários no site e assim ter acesso as outras páginas privadas.
-- **Dashboard (Privada):** A página que tem a funcionalidade de registrar chamados.
-- **Novo Chamado (Privada):** A página que tem a função de adicionar um novo chamado no Dashboard.
-- **Customers (Privada):** A página que tem a funcionalidade de cadastrar uma empresa, colocando o nome da empresa, CPNJ e o endereço da empresa.
-- **Profile (Privada):** A página que apresenta as informações (nome, email e avatar) do usuário cadastrado, a qual possui a funcionalidade de edita-las, exceto o e-mail.
+- **Login:** The page to login and access the site.
+- **Registration:** The page that has the functionality to register users on the site and thus have access to other private pages.
+- **Dashboard (Private):** The page that has the functionality to record tickets.
+- **New Ticket (Private):** The page that has the function of adding a new ticket on the Dashboard.
+- **Customers (Private):** The page that has the functionality to register a company, putting the company name, CPNJ and the company address.
+- **Profile (Private):** The page that presents the information (name, email and avatar) of the registered user, which has the functionality to edit them, except for the email.
 
-## 🎯 Etapas
+## 🎯 Steps
 
-:heavy_check_mark: Estilos Globais do Projeto\
-:heavy_check_mark: Adicionando Firebase\
-:heavy_check_mark: Página/Rotas do Login e Registro\
-:heavy_check_mark: Estruturação/Estilização do Login e Registro\
-:heavy_check_mark: Página/Rota do Dashboard (Rota Privada)\
-:heavy_check_mark: Context Criado\
-:heavy_check_mark: Importando Ferramentas do Firebase\
-:heavy_check_mark: Funcionalidade Login/Registro com o Firebase\
-:heavy_check_mark: Adicionando Toastify\
-:heavy_check_mark: Componente Header\
-:heavy_check_mark: Componente Title\
-:heavy_check_mark: Página/Rota do Perfil do usuário (Rota Privada)\
-:heavy_check_mark: Estruturação/Estilização do Perfil\
-:heavy_check_mark: Editar o Perfil\
-:heavy_check_mark: Página/Rota do Customers (Rota Privada)\
-:heavy_check_mark: Estruturação/Estilização do Customers\
-:heavy_check_mark: Registrar uma Empresa no Customers\
-:heavy_check_mark: Refatoração do Dashboard\
-:heavy_check_mark: Estruturação/Estilização do Dashboard\
-:heavy_check_mark: Página/Rota do New (Rota Privada)\
-:heavy_check_mark: Funções na página para novos chamados\
-:heavy_check_mark: Opção de buscar chamado no Dashboard\
-:heavy_check_mark: Estruturação/Estilização do Modal\
-:heavy_check_mark: Editar chamado\
-:heavy_check_mark: Projeto Finalizado
-
+:heavy_check_mark: Global Project Styles\
+:heavy_check_mark: Adding Firebase\
+:heavy_check_mark: Login and Registration Page/Routes\
+:heavy_check_mark: Login and Registration Structuring/Styling\
+:heavy_check_mark: Dashboard Page/Route (Private Route)\
+:heavy_check_mark: Context Created\
+:heavy_check_mark: Importing Firebase Tools\
+:heavy_check_mark: Login/Register functionality with Firebase\
+:heavy_check_mark: Adding Toastify\
+:heavy_check_mark: Header component\
+:heavy_check_mark: Component Title\
+:heavy_check_mark: User Profile Page/Route (Private Route)\
+:heavy_check_mark: Profile Structuring/Styling\
+:heavy_check_mark: Edit Profile\
+:heavy_check_mark: Customers Page/Route (Private Route)\
+:heavy_check_mark: Customers\ Structuring/Styling
+:heavy_check_mark: Register a Company in Customers\
+:heavy_check_mark: Dashboard Refactoring\
+:heavy_check_mark: Dashboard Structuring/Styling\
+:heavy_check_mark: New Page/Route (Private Route)\
+:heavy_check_mark: Functions on the page for new tickets\
+:heavy_check_mark: Option to search ticket in Dashboard\
+:heavy_check_mark: Modal Structuring/Styling\
+:heavy_check_mark: Edit ticket\
+:heavy_check_mark: Finished Project
 --- ⚙️ Extra ---\
-:heavy_check_mark: Adicionando Styled-Components
+:heavy_check_mark: Adding Styled-Components
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 - [ReactJs](https://pt-br.reactjs.org/docs/getting-started.html)
 - [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
@@ -83,18 +82,18 @@ O site tem no total 5 páginas, sendo elas:
 - [Styled Components](https://styled-components.com)
 - [Date-fns](https://date-fns.org/docs/Getting-Started)
 
-## :closed_book: Como usar?
+## :closed_book: How to use it?
 
-Antes de iniciar, você precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
+Before starting, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
 
 ```bash
 # Clone this project
 $ git clone https://github.com/Kayke-Fujinaka/Call-System
 
-# Access
+# access
 $ cd call-system
 
-# Install dependencies
+# install dependencies
 $ yarn or npm
 
 # Run the project
@@ -103,27 +102,27 @@ $ yarn start or npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## 🤝 Colaboradores
+## 🤝 Collaborators
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+Thanks to the following people who contributed to this project:
 
 <table>
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Foto do Kayke Fujinaka no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/98772000?s=400&u=80de9af672be7f75cc7a546838552cf63d5b82fe&v=4" width="160px;" alt="Photo by Kayke Fujinaka on GitHub"/><br>
         <sub>
           <b>Kayke Fujinaka</b>
         </sub>
       </a>
-    </td>
+    </all>
   </tr>
 </table>
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob licença. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+This project is under license. See the [LICENSE](LICENSE.md) file for more details.
 
 &#xa0;
 
-<a href="#top">Volte para o topo</a>
+<a href="#top">Go back to top</a>
